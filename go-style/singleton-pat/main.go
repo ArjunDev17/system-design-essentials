@@ -34,5 +34,7 @@ func main() {
 	etrance1.entryTime = "22:36"
 	etrance1.numberPlate = "jjsdcsd"
 	etrance1.vehchleType = "2Wheeler"
+	etrance2 := GetInstance()
+	etrance2.entryTime = "11:23"
 
 }
