@@ -6,14 +6,14 @@ import (
 )
 
 func main() {
-	fmt.Println("factory pattern method example")
+	fmt.Println("=== OCP-Compliant Payment Factory Example ===")
 
-	p1 := payment.GetPaymentWay("UPI")
+	p1 := payment.GetPaymentMethod("UPI")
 	p1.Process()
 
-	p2 := payment.GetPaymentWay("CREDIT_CARD")
+	p2 := payment.GetPaymentMethod("CREDITCARD")
 	p2.Process()
 
-	p3 := payment.GetPaymentWay("NET_BANKING")
+	p3 := payment.GetPaymentMethod("NETBANKING")
 	p3.Process()
 }

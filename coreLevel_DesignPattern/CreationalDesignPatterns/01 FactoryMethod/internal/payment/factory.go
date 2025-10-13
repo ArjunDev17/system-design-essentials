@@ -1,15 +1,22 @@
 package payment
 
-func GetPaymentWay(way string) Payment {
-	switch way {
-	case "CREDIT_CARD":
-		return CreditCardPayment{}
-	case "UPI":
-		return UPIPayment{}
-	case "NET_BANKING":
-		return NetBanking{}
-	default:
-		panic("NO Sucha method exst as of now")
+import (
+	"fmt"
+)
 
+// registry holds all registered payment types
+var registry = make(map[string]func() Payment)
+
+// RegisterPayment registers a new payment type in the factory
+func RegisterPayment(name string, constructor func() Payment) {
+	registry[name] = constructor
+}
+
+// GetPaymentMethod retrieves the payment implementation
+func GetPaymentMethod(method string) Payment {
+	constructor, exists := registry[method]
+	if !exists {
+		panic(fmt.Sprintf("❌ Unknown payment method: %s", method))
 	}
+	return constructor()
 }
