@@ -2,11 +2,10 @@ package payment
 
 import "fmt"
 
-// UPIPayment implements Payment interface
 type UPIPayment struct{}
 
-func (u UPIPayment) Process() {
-	fmt.Println("📱 Processing payment via UPI...")
+func (up UPIPayment) Process() {
+	fmt.Println("Payment Done By UPI")
 }
 
 func init() {

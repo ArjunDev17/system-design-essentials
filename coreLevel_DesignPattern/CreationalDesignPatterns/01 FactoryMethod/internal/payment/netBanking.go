@@ -2,15 +2,13 @@ package payment
 
 import "fmt"
 
-// NetBankingPayment implements Payment interface
-type NetBankingPayment struct{}
+type NetBanking struct{}
 
-func (n NetBankingPayment) Process() {
-	fmt.Println("🏦 Processing payment via NetBanking...")
+func (netBanking NetBanking) Process() {
+	fmt.Println("Payment done using NetBanking ")
 }
-
 func init() {
-	RegisterPayment("NETBANKING", func() Payment {
-		return NetBankingPayment{}
+	RegisterPayment("NET_BANKING", func() Payment {
+		return NetBanking{}
 	})
 }
