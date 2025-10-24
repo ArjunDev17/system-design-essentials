@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"payment-system/internal/factory"
-	"payment-system/internal/registry"
+	"payment-system/internal/payment/registry"
 )
 
 func main() {

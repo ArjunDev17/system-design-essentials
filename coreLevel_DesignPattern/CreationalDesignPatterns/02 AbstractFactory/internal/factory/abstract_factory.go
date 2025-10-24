@@ -1,8 +1,8 @@
 package factory
 
-import "payment-sys/internal/methods"
+import "payment-system/internal/methods"
 
-type PaymentGateWayFactory interface {
+type PaymentGatewayFactory interface {
 	CreateUPI() methods.Payment
 	CreateNetBanking() methods.Payment
 }

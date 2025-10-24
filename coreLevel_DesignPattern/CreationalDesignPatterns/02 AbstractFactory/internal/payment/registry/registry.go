@@ -14,7 +14,7 @@ func RegisterGateway(name string, gateway factory.PaymentGatewayFactory) {
 func GetGateway(name string) factory.PaymentGatewayFactory {
 	g, exists := gatewayRegistry[name]
 	if !exists {
-		panic("❌ unknown payment gateway: " + name)
+		panic("unknown payment gateway: " + name)
 	}
 	return g
 }

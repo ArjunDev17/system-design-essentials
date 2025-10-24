@@ -2,7 +2,7 @@ package factory
 
 import (
 	"payment-system/internal/methods"
-	"payment-system/internal/paytm"
+	"payment-system/internal/payment/paytm"
 )
 
 // PaytmFactory creates Paytm payment methods.
