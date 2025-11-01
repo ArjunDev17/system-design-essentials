@@ -17,6 +17,6 @@ func main() {
 	director = payment.NewPaymentDirector(cardBuilder)
 	cardPayment := director.BuildPayment(12000, "USD", "ORD_002")
 
-	fmt.Printf("✅ UPI Payment: %+v\n", upiPayment)
-	fmt.Printf("💳 Card Payment: %+v\n", cardPayment)
+	fmt.Printf("UPI Payment: %+v\n", upiPayment)
+	fmt.Printf("Card Payment: %+v\n", cardPayment)
 }
