@@ -1,0 +1,218 @@
+🧱 CREATIONAL DESIGN PATTERNS — INTERVIEW ORIENTED
+Creational patterns deal with object creation logic — ensuring flexibility, decoupling, and correctness in how objects are created.
+There are 5 main patterns:
+Singleton
+
+
+Factory Method
+
+
+Abstract Factory
+
+
+Builder
+
+
+Prototype
+
+
+
+1️⃣ Singleton Pattern
+✅ Definition
+Ensures only one instance of a class exists in the entire application and provides a global access point to it.
+🎯 Interview Scenarios
+Database Connection Pool
+
+
+Logger instance
+
+
+Configuration manager (config.yaml, env values)
+
+
+Cache manager (Redis, in-memory LRU)
+
+
+Thread pool executor
+
+
+🧠 When to Use
+Use Singleton when:
+You need exactly one instance
+
+
+You need centralized control
+
+
+Instance should be reused (avoid new allocations)
+
+
+🔑 Memory Trick
+“One object for entire application — Singleton.”
+
+2️⃣ Factory Method Pattern
+✅ Definition
+Defines an interface for object creation but lets subclasses decide which class to instantiate.
+🎯 Interview Scenarios
+Notification service (SMS, Email, Push)
+
+
+Payment method selection (UPI, Card, NetBanking)
+
+
+Message parser (JSON, XML, YAML)
+
+
+Cloud provider selection (AWS, GCP, Azure)
+
+
+🧠 When to Use
+Use Factory Method when:
+You want different implementations of same interface
+
+
+You don’t want client to know object-construction details
+
+
+You want to add new types without modifying existing code
+
+
+🔑 Memory Trick
+“One interface, many implementations.”
+
+3️⃣ Abstract Factory Pattern
+✅ Definition
+Provides an interface to create families of related objects without specifying their concrete classes.
+🎯 Interview Scenarios
+UI Themes (DarkTheme → DarkButton, DarkCheckbox)
+
+
+Payment Gateways (Razorpay → UPI, NetBanking, Card)
+
+
+Multi-Cloud services (AWS → S3, SNS, Lambda)
+
+
+Operating systems (Windows Factory → WinButton, WinFileSystem)
+
+
+🧠 When to Use
+Use Abstract Factory when:
+Objects come in related families
+
+
+You must ensure consistency of family
+ (e.g., RazorpayUPI + RazorpayNetBanking, not PaytmUPI + RazorpayNetBanking)
+
+
+🔑 Memory Trick
+“Factory of factories — grouped products.”
+
+4️⃣ Builder Pattern
+✅ Definition
+Separates object construction from representation, allowing step-by-step construction of complex objects.
+🎯 Interview Scenarios
+Building a complex HTTP Request object
+
+
+Constructing SQL queries (SELECT → WHERE → ORDER BY)
+
+
+Creating large objects like:
+
+
+UserProfile
+
+
+Report
+
+
+Vehicle (engine → seats → GPS → type)
+
+
+Creating immutable objects
+
+
+🧠 When to Use
+Use Builder when:
+Object has too many parameters
+
+
+Object requires step-by-step construction
+
+
+You want immutable objects
+
+
+Construction logic is complex and conditional
+
+
+🔑 Memory Trick
+“Step-by-step construction of complex objects.”
+
+5️⃣ Prototype Pattern
+✅ Definition
+Creates objects by cloning existing objects (deep copy or shallow copy).
+🎯 Interview Scenarios
+Large object creation is expensive (big configurations)
+
+
+Caching frequently used objects
+
+
+Document editor → copy & paste
+
+
+Game development → clone enemy, NPC, weapon configs
+
+
+Machine Learning → cloning model config templates
+
+
+🧠 When to Use
+Use Prototype when:
+Object creation cost is high
+
+
+You need cloning instead of creating from scratch
+
+
+🔑 Memory Trick
+“Copy, don’t create.”
+
+🧠 Final Interview Cheat Sheet (One-Line Summary)
+Pattern
+One Line Definition
+Best Scenario
+Singleton
+Only one instance, globally accessible
+Logger, Config, DB connection
+Factory Method
+One interface → many implementations
+Payment, Notification, Parser
+Abstract Factory
+Factory of factories (family of related objects)
+UI themes, Payment gateways
+Builder
+Step-by-step construction
+Complex object creation
+Prototype
+Clone objects instead of creating
+Expensive object creation
+
+
+🎯 How to Answer in Interview (2-Minute Perfect Answer)
+“Creational patterns solve object creation problems.
+ Singleton ensures only one instance exists — used in DB connections or config.
+ Factory Method lets subclasses decide which object to create — perfect when choosing payment types or notifications.
+ Abstract Factory creates families of related objects — like RazorpayUPI + RazorpayNetBanking.
+ Builder constructs complex objects step-by-step, like building a heavy HTTP request.
+ Prototype clones existing objects when creation cost is high.”
+
+If you want, I can also give:
+ ✅ Java Code for each pattern
+ OR
+ ✅ Golang Code for each pattern
+ OR
+ ✅ A full comparison table with DOs & DON'Ts for interviews.
+
