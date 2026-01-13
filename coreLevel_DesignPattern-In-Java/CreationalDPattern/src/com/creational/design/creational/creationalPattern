@@ -1,0 +1,11 @@
+Singleton Pattern
+Factory Pattern
+AbstractFactory Pattern
+Builder Pattern
+
+------------------
+
+Singleton → object control
+Factory → object selection
+Builder → object construction
+Prototype → object duplication
