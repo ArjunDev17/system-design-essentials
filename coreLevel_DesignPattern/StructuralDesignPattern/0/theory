@@ -7,3 +7,10 @@ Structural Design Patterns:
 6. Flyweight
 7. Proxy
   
+1. **Adapter** – Converts one interface into another expected by clients.
+2. **Bridge** – Separates abstraction from implementation so both can vary independently.
+3. **Composite** – Treats individual objects and compositions uniformly in a tree structure.
+4. **Decorator** – Adds new behavior to objects dynamically without altering their structure.
+5. **Facade** – Provides a simplified interface to a complex subsystem.
+6. **Flyweight** – Reduces memory usage by sharing common object data.
+7. **Proxy** – Controls access to an object by acting as a substitute or placeholder.
